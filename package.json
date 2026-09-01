@@ -1,0 +1,41 @@
+{
+  "name": "poc-evidence",
+  "version": "0.1.0",
+  "description": "Evidence-grade PoC capture, deterministic replay and hash-chain timestamping for security researchers and bug bounty reports.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "bin": {
+    "poc-evidence": "bin/poc-evidence.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "security",
+    "bug-bounty",
+    "poc",
+    "evidence",
+    "reproducibility",
+    "hash-chain",
+    "timestamping",
+    "vulnerability",
+    "audit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HZDF-2026/poc-evidence.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HZDF-2026/poc-evidence/issues"
+  },
+  "homepage": "https://github.com/HZDF-2026/poc-evidence#readme"
+}
