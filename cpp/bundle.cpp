@@ -1,0 +1,330 @@
+// bundle.cpp — see bundle.h. REPORT.md / VERIFY.txt reproduce the frozen
+// templates from lib/bundle.mjs byte for byte (including the em dashes and
+// the "…" ellipsis).
+#include "bundle.h"
+
+#include "chain.h"
+#include "jsjson.h"
+#include "sha256.h"
+#include "util.h"
+
+#include <filesystem>
+#include <stdexcept>
+
+namespace pocev {
+
+namespace {
+
+std::string num(const Json* v) {
+    if (!v) return "null";
+    if (v->isNum()) return jsNumberToString(v->num);
+    if (v->isNull()) return "null";
+    if (v->isStr()) return v->str;
+    return v->dump();
+}
+
+std::string strOrEmpty(const Json* v) {
+    return v && v->isStr() ? v->str : "";
+}
+
+std::string fileRows(const Json& list) {
+    std::string out;
+    bool first = true;
+    for (const auto& f : list.arr) {
+        if (!first) out += "\n";
+        first = false;
+        out += "| `" + strOrEmpty(f.get("path")) + "` | `" + strOrEmpty(f.get("sha256")) + "` |";
+    }
+    return out;
+}
+
+std::string renderReport(const Json& m) {
+    const Json* c = m.get("capture");
+    const Json* p = c ? c->get("payload") : nullptr;
+    const Json* replays = m.get("replays");
+    const Json* anchors = m.get("anchors");
+
+    std::string replayRows;
+    if (replays && !replays->arr.empty()) {
+        bool first = true;
+        for (const auto& r : replays->arr) {
+            if (!first) replayRows += "\n";
+            first = false;
+            replayRows += "| " + strOrEmpty(r.get("id")) + " | " + strOrEmpty(r.get("ts")) +
+                          " | **" + strOrEmpty(r.get("payload") ? r.get("payload")->get("verdict")
+                                                               : nullptr) +
+                          "** |";
+        }
+    } else {
+        replayRows = "| — | — | none yet |";
+    }
+
+    std::string anchorRows;
+    if (anchors && !anchors->arr.empty()) {
+        bool first = true;
+        for (const auto& r : anchors->arr) {
+            if (!first) anchorRows += "\n";
+            first = false;
+            const Json* pl = r.get("payload");
+            std::string head = strOrEmpty(pl ? pl->get("head") : nullptr);
+            if (head.size() > 16) head = head.substr(0, 16);
+            const Json* msg = pl ? pl->get("message") : nullptr;
+            anchorRows += "| " + strOrEmpty(r.get("ts")) + " | `" + head + "…` | " +
+                          (msg && msg->isStr() ? msg->str : "") + " |";
+        }
+    } else {
+        anchorRows = "| — | none yet | |";
+    }
+
+    const Json* normalizers = p ? p->get("normalizers") : nullptr;
+    std::string normList;
+    if (normalizers && !normalizers->arr.empty()) {
+        bool first = true;
+        for (const auto& n : normalizers->arr) {
+            if (!first) normList += "\n";
+            first = false;
+            normList += "- pattern `" + strOrEmpty(n.get("pattern")) + "` (flags `" +
+                        strOrEmpty(n.get("flags")) + "`) => `" + strOrEmpty(n.get("replacement")) +
+                        "`";
+        }
+    } else {
+        normList = "- none";
+    }
+
+    const Json* redactions = p ? p->get("redactions") : nullptr;
+    std::string redactList;
+    if (redactions && !redactions->arr.empty()) {
+        bool first = true;
+        for (const auto& n : redactions->arr) {
+            if (!first) redactList += "\n";
+            first = false;
+            redactList += "- pattern `" + strOrEmpty(n.get("pattern")) + "` (flags `" +
+                          strOrEmpty(n.get("flags")) + "`) => `[REDACTED]`";
+        }
+    } else {
+        redactList = "- none";
+    }
+
+    const Json* runtime = p ? p->get("runtime") : nullptr;
+    const Json* inputFiles = p ? p->get("inputFiles") : nullptr;
+    const Json* outputFiles = p ? p->get("outputFiles") : nullptr;
+    size_t inCount = inputFiles && inputFiles->isArr() ? inputFiles->arr.size() : 0;
+    size_t outCount = outputFiles && outputFiles->isArr() ? outputFiles->arr.size() : 0;
+
+    std::string commandJoined;
+    if (p) {
+        const Json* cmd = p->get("command");
+        if (cmd && cmd->isArr()) {
+            bool first = true;
+            for (const auto& a : cmd->arr) {
+                if (!first) commandJoined += " ";
+                first = false;
+                commandJoined += a.isStr() ? a.str : a.dump();
+            }
+        }
+    }
+
+    std::string envNote = "SHA-256 hashes (values never stored)";
+    if (p) {
+        const Json* envMode = p->get("envMode");
+        if (envMode && envMode->isStr() && envMode->str == "values") {
+            envNote = "**values** (captured with --env-values)";
+        }
+    }
+
+    std::string labelBlock;
+    if (p) {
+        const Json* label = p->get("label");
+        if (label && label->isStr() && !label->str.empty()) {
+            labelBlock = "\n**Label:** " + label->str + "\n";
+        }
+    }
+
+    std::string out;
+    out += "# PoC Evidence — " + strOrEmpty(c ? c->get("id") : nullptr) + "\n";
+    out += labelBlock;
+    out += "\n";
+    out += "Generated by poc-evidence v" + strOrEmpty(m.get("version")) + " at " +
+           strOrEmpty(m.get("generatedAt")) +
+           ". All digests are SHA-256.\n";
+    out += "\n## Command\n";
+    out += "\n```sh\n";
+    out += commandJoined + "\n";
+    out += "```\n";
+    out += "\n- Working directory: `" + strOrEmpty(p ? p->get("cwd") : nullptr) + "`\n";
+    out += "- Platform: " + strOrEmpty(runtime ? runtime->get("platform") : nullptr) + " (" +
+           strOrEmpty(runtime ? runtime->get("arch") : nullptr) + "), node " +
+           strOrEmpty(runtime ? runtime->get("node") : nullptr) + "\n";
+    out += "- Exit code: **" + num(p ? p->get("exitCode") : nullptr) + "** after " +
+           num(p ? p->get("durationMs") : nullptr) + " ms\n";
+    out += "\n## Output digests (after redaction + normalization)\n";
+    out += "\n| Stream | SHA-256 |\n|---|---|\n";
+    out += "| stdout (" + num(p ? p->get("stdoutBytes") : nullptr) + " bytes) | `" +
+           strOrEmpty(p ? p->get("stdoutHash") : nullptr) + "` |\n";
+    out += "| stderr (" + num(p ? p->get("stderrBytes") : nullptr) + " bytes) | `" +
+           strOrEmpty(p ? p->get("stderrHash") : nullptr) + "` |\n";
+    out += "\n## Input files (" + jsNumberToString(static_cast<double>(inCount)) + ")\n";
+    out += "\n| Path | SHA-256 |\n|---|---|\n";
+    out += (inCount && inputFiles ? fileRows(*inputFiles) : "| — | |") + "\n";
+    out += "\n## Output files (" + jsNumberToString(static_cast<double>(outCount)) + ")\n";
+    out += "\n| Path | SHA-256 |\n|---|---|\n";
+    out += (outCount && outputFiles ? fileRows(*outputFiles) : "| — | |") + "\n";
+    out += "\n## Determinism\n";
+    out += "\n| Replay | At | Verdict |\n|---|---|---|\n";
+    out += replayRows + "\n";
+    out += "\nNormalization rules applied before hashing:\n";
+    out += normList + "\n";
+    out += "\nRedaction rules applied before storing:\n";
+    out += redactList + "\n";
+    out += "\n## Integrity\n";
+    out += "\n- Capture record hash: `" + strOrEmpty(c ? c->get("hash") : nullptr) + "`\n";
+    out += "- Chain head after capture: `" + strOrEmpty(m.get("headAfter")) + "`\n";
+    out += "- Environment: recorded as " + envNote + "\n";
+    out += "\n| Anchor | Head | Note |\n|---|---|---|\n";
+    out += anchorRows + "\n";
+    out += "\n## Scope & limits (read before relying on this)\n";
+    out += "\nThis bundle does NOT prove when the vulnerability was discovered — only when\n";
+    out += "each record was hashed. It also does NOT prove that outputs were not crafted\n";
+    out += "before capture by a malicious wrapper: poc-evidence attests what the recorded\n";
+    out += "command produced, not how that command came to exist.\n";
+    out += "\n## Verify\n";
+    out += "\nSee `VERIFY.txt` in this bundle. Bundle file digests are listed in `manifest.json`.\n";
+    return out;
+}
+
+std::string renderVerify(const Json& m) {
+    const Json* files = m.get("files");
+    std::string fileList;
+    if (files) {
+        bool first = true;
+        for (const auto& f : files->arr) {
+            if (!first) fileList += "\n";
+            first = false;
+            fileList += "  " + strOrEmpty(f.get("path")) + "  " + strOrEmpty(f.get("sha256"));
+        }
+    }
+    std::string out;
+    out += "Verifying this poc-evidence bundle\n";
+    out += "====================================\n";
+    out += "\n1) File digests (no extra tooling required)\n";
+    out += "\n   Linux/macOS:  sha256sum <file>      (or: shasum -a 256 <file>)\n";
+    out += "   Windows:      certutil -hashfile <file> SHA256\n";
+    out += "\n   Expected digests:\n";
+    out += fileList + "\n";
+    out += "\n   These must match the files in this bundle exactly, and the \"files\" array\n";
+    out += "   in manifest.json must match this list.\n";
+    out += "\n2) Chain integrity (requires poc-evidence)\n";
+    out += "\n   In an empty directory:\n";
+    out += "     mkdir .poc-evidence\n";
+    out += "     cp chain.jsonl .poc-evidence/chain.jsonl\n";
+    out += "     poc-evidence verify\n";
+    out += "\n   This recomputes every record hash and verifies each record links to the\n";
+    out += "   previous one. Any edit after the fact breaks the chain.\n";
+    out += "\n3) Reproduction\n";
+    out += "\n   Restore the input files (digests in REPORT.md), run the command from\n";
+    out += "   REPORT.md in the recorded working directory, then compare exit code and\n";
+    out += "   output digests. With poc-evidence, keep .poc-evidence/chain.jsonl in the\n";
+    out += "   tree and run:\n";
+    out += "     poc-evidence replay " + strOrEmpty(m.get("captureId")) + "\n";
+    out += "\n   Remember: digests cover redacted + normalized output. Apply the rules\n";
+    out += "   listed in REPORT.md (and manifest.json) before comparing.\n";
+    out += "\nWhat this proves\n";
+    out += "----------------\n";
+    out += "- The recorded command produced exactly the recorded digests at capture time.\n";
+    out += "- The evidence chain has not been edited since each record was appended.\n";
+    out += "- Git anchors (if any) bind chain heads to commits; pushing those commits to\n";
+    out += "  a remote produces a third-party timestamp of the anchored state.\n";
+    out += "\nWhat it does NOT prove\n";
+    out += "----------------------\n";
+    out += "- When the vulnerability was discovered (only when the evidence was hashed).\n";
+    out += "- That outputs were not crafted before capture by a malicious wrapper.\n";
+    return out;
+}
+
+}  // namespace
+
+BundleResult buildBundle(const std::string& cwd, const std::string& captureId,
+                         const std::string& outDir) {
+    std::vector<Json> records = readChain(cwd);
+    const Json* capture = nullptr;
+    size_t captureIndex = 0;
+    for (size_t i = 0; i < records.size(); i++) {
+        const Json* id = records[i].get("id");
+        const Json* type = records[i].get("type");
+        if (id && id->isStr() && id->str == captureId && type && type->isStr() &&
+            type->str == "capture") {
+            capture = &records[i];
+            captureIndex = i;
+            break;
+        }
+    }
+    if (!capture) throw std::runtime_error("capture not found: " + captureId);
+
+    Json replays = Json::array();
+    Json anchors = Json::array();
+    for (const auto& r : records) {
+        const Json* type = r.get("type");
+        if (!type || !type->isStr()) continue;
+        const Json* payload = r.get("payload");
+        if (type->str == "replay") {
+            const Json* ref = payload ? payload->get("ref") : nullptr;
+            if (ref && ref->isStr() && ref->str == captureId) replays.push(r);
+        } else if (type->str == "anchor") {
+            anchors.push(r);
+        }
+    }
+
+    std::string headAfter;
+    if (captureIndex + 1 < records.size()) {
+        const Json* h = records[captureIndex + 1].get("hash");
+        headAfter = h && h->isStr() ? h->str : "";
+    } else {
+        const Json* h = capture->get("hash");
+        headAfter = h && h->isStr() ? h->str : "";
+    }
+
+    std::string dirName = outDir.empty() ? "evidence-" + captureId : outDir;
+    std::string out = pathResolve(cwd, dirName);
+    std::error_code ec;
+    std::filesystem::create_directories(std::filesystem::path(out), ec);
+
+    Json files = Json::array();
+    auto copyIn = [&](const std::string& src, const std::string& name) {
+        std::string dst = pathJoin(out, name);
+        std::error_code cec;
+        std::filesystem::copy_file(std::filesystem::path(src), std::filesystem::path(dst), cec);
+        if (cec) return false;
+        Json f = Json::object();
+        f.set("path", Json::string(name));
+        f.set("sha256", Json::string(sha256File(dst)));
+        files.push(f);
+        return true;
+    };
+    copyIn(chainFilePath(cwd), "chain.jsonl");
+    copyIn(pathJoin(pathJoin(cwd, ARTIFACTS_DIR), captureId + ".stdout.txt"),
+           captureId + ".stdout.txt");
+    copyIn(pathJoin(pathJoin(cwd, ARTIFACTS_DIR), captureId + ".stderr.txt"),
+           captureId + ".stderr.txt");
+
+    Json manifest = Json::object();
+    manifest.set("tool", Json::string("poc-evidence"));
+    manifest.set("version", Json::string(VERSION));
+    manifest.set("captureId", Json::string(captureId));
+    manifest.set("generatedAt", Json::string(nowIso()));
+    manifest.set("capture", *capture);
+    manifest.set("replays", replays);
+    manifest.set("anchors", anchors);
+    manifest.set("headAfter", Json::string(headAfter));
+    manifest.set("files", files);
+
+    writeFileBytes(pathJoin(out, "manifest.json"), manifest.dumpIndent());
+    writeFileBytes(pathJoin(out, "REPORT.md"), renderReport(manifest));
+    writeFileBytes(pathJoin(out, "VERIFY.txt"), renderVerify(manifest));
+
+    BundleResult result;
+    result.out = out;
+    result.manifest = manifest;
+    return result;
+}
+
+}  // namespace pocev

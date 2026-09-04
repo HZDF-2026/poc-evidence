@@ -1,0 +1,818 @@
+{
+  "sha256": [
+    {
+      "input": "",
+      "hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "input": "abc",
+      "hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "input": "The quick brown fox jumps over the lazy dog",
+      "hex": "d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592"
+    },
+    {
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "hex": "27dd1f61b867b6a0f6e9d8a41c43231de52107e53ae424de8f847b821db4b711"
+    },
+    {
+      "input": "héllo 世界 🚀 done",
+      "hex": "540f23ec8e0882cb71b631e41586d3b411a14bf2f5d0a32fdce690c3fc2cdf39"
+    },
+    {
+      "input": "line1\r\nline2\n",
+      "hex": "6825eec65a7385d7b1e713ccc3ff37df54f90b38aed6edca93bddb734fad0b42"
+    },
+    {
+      "input": "µ-shift: Âçñ",
+      "hex": "b124559176f76f69379931406eabba59f4bebda0c42c1084751aae96b9243644"
+    },
+    {
+      "input": "{\"deep\":true}",
+      "hex": "5092f164c1d4fa9b753e1f52a08fa3ba12b9e3afe1fbc5ba1f27215232470f13"
+    }
+  ],
+  "stableStringify": [
+    {
+      "value": null,
+      "out": "null"
+    },
+    {
+      "value": true,
+      "out": "true"
+    },
+    {
+      "value": 0,
+      "out": "0"
+    },
+    {
+      "value": 0,
+      "out": "0"
+    },
+    {
+      "value": 1,
+      "out": "1"
+    },
+    {
+      "value": 0.1,
+      "out": "0.1"
+    },
+    {
+      "value": 0.3333333333333333,
+      "out": "0.3333333333333333"
+    },
+    {
+      "value": 1e+21,
+      "out": "1e+21"
+    },
+    {
+      "value": 5e-324,
+      "out": "5e-324"
+    },
+    {
+      "value": 1.7976931348623157e+308,
+      "out": "1.7976931348623157e+308"
+    },
+    {
+      "value": 9007199254740992,
+      "out": "9007199254740992"
+    },
+    {
+      "value": "plain",
+      "out": "\"plain\""
+    },
+    {
+      "value": "quote \" backslash \\ newline \n tab \t ctrl \u0001 esc \u001b",
+      "out": "\"quote \\\" backslash \\\\ newline \\n tab \\t ctrl \\u0001 esc \\u001b\""
+    },
+    {
+      "value": "surrogate pair 🚀 and lone \ud800 high \udc00 low",
+      "out": "\"surrogate pair 🚀 and lone \\ud800 high \\udc00 low\""
+    },
+    {
+      "value": [],
+      "out": "[]"
+    },
+    {
+      "value": [
+        1,
+        "two",
+        null,
+        false,
+        [
+          3,
+          [
+            4
+          ]
+        ]
+      ],
+      "out": "[1,\"two\",null,false,[3,[4]]]"
+    },
+    {
+      "value": {},
+      "out": "{}"
+    },
+    {
+      "value": {
+        "z": 1,
+        "a": 2,
+        "m": 3
+      },
+      "out": "{\"a\":2,\"m\":3,\"z\":1}"
+    },
+    {
+      "value": {
+        "b": {
+          "y": 1,
+          "x": 2
+        },
+        "a": [
+          {
+            "q": null,
+            "c": "z"
+          }
+        ]
+      },
+      "out": "{\"a\":[{\"c\":\"z\",\"q\":null}],\"b\":{\"x\":2,\"y\":1}}"
+    },
+    {
+      "value": {
+        "é": 1,
+        "e": 2,
+        "E": 3,
+        "A": 4,
+        "a": 5,
+        "😀": 6
+      },
+      "out": "{\"A\":4,\"E\":3,\"a\":5,\"e\":2,\"é\":1,\"😀\":6}"
+    },
+    {
+      "value": {
+        "nested": {
+          "deep": {
+            "deeper": {
+              "key": "value",
+              "z": [
+                1,
+                {
+                  "k": 2
+                }
+              ]
+            }
+          }
+        }
+      },
+      "out": "{\"nested\":{\"deep\":{\"deeper\":{\"key\":\"value\",\"z\":[1,{\"k\":2}]}}}}"
+    }
+  ],
+  "jsonParse": [
+    {
+      "text": "{\"a\":1}",
+      "ok": true,
+      "out": "{\"a\":1}"
+    },
+    {
+      "text": "{ \"a\" : [ 1.5e2 , -0.25 ] }",
+      "ok": true,
+      "out": "{\"a\":[150,-0.25]}"
+    },
+    {
+      "text": "[1,2,3]",
+      "ok": true,
+      "out": "[1,2,3]"
+    },
+    {
+      "text": "[]",
+      "ok": true,
+      "out": "[]"
+    },
+    {
+      "text": "{}",
+      "ok": true,
+      "out": "{}"
+    },
+    {
+      "text": "\"lone high \\ud800\"",
+      "ok": true,
+      "out": "\"lone high \\ud800\""
+    },
+    {
+      "text": "\"lone low \\udc00\"",
+      "ok": true,
+      "out": "\"lone low \\udc00\""
+    },
+    {
+      "text": "\"pair \\ud83d\\ude80\"",
+      "ok": true,
+      "out": "\"pair 🚀\""
+    },
+    {
+      "text": "1e999",
+      "ok": true,
+      "out": "null"
+    },
+    {
+      "text": "-0",
+      "ok": true,
+      "out": "0"
+    },
+    {
+      "text": "0.1",
+      "ok": true,
+      "out": "0.1"
+    },
+    {
+      "text": "  {\"a\":1}  ",
+      "ok": true,
+      "out": "{\"a\":1}"
+    },
+    {
+      "text": "\t\n[true,false,null]\r\n",
+      "ok": true,
+      "out": "[true,false,null]"
+    },
+    {
+      "text": "",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "{",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "[1,2",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "{\"a\":1,}",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "{'a':1}",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "undefined",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "NaN",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "Infinity",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "\"raw\nnewline\"",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "\"\t\"",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "{\"a\":1} extra",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "[1,2] [3]",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "+1",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": ".5",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "01",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "\"\\x41\"",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "{\"a\" 1}",
+      "ok": false,
+      "out": null
+    },
+    {
+      "text": "\"unterminated",
+      "ok": false,
+      "out": null
+    }
+  ],
+  "parseRegexSpec": [
+    {
+      "spec": "plain",
+      "pattern": "plain",
+      "flags": "g"
+    },
+    {
+      "spec": "/abc/",
+      "pattern": "abc",
+      "flags": "g"
+    },
+    {
+      "spec": "/abc/g",
+      "pattern": "abc",
+      "flags": "g"
+    },
+    {
+      "spec": "/abc/i",
+      "pattern": "abc",
+      "flags": "ig"
+    },
+    {
+      "spec": "/abc/gi",
+      "pattern": "abc",
+      "flags": "gi"
+    },
+    {
+      "spec": "/abc/m",
+      "pattern": "abc",
+      "flags": "mg"
+    },
+    {
+      "spec": "/abc/u",
+      "pattern": "abc",
+      "flags": "ug"
+    },
+    {
+      "spec": "/abc/uy",
+      "pattern": "abc",
+      "flags": "uyg"
+    },
+    {
+      "spec": "/a\\/b/",
+      "pattern": "a\\/b",
+      "flags": "g"
+    },
+    {
+      "spec": "/\\/x\\//g",
+      "pattern": "\\/x\\/",
+      "flags": "g"
+    },
+    {
+      "spec": "/[]/",
+      "pattern": "[]",
+      "flags": "g"
+    },
+    {
+      "spec": "weird//path",
+      "pattern": "weird//path",
+      "flags": "g"
+    },
+    {
+      "spec": "/plain",
+      "pattern": "/plain",
+      "flags": "g"
+    },
+    {
+      "spec": "plain/",
+      "pattern": "plain/",
+      "flags": "g"
+    }
+  ],
+  "replace": [
+    {
+      "subject": "hello world",
+      "pattern": "o",
+      "flags": "g",
+      "replacement": "0",
+      "out": "hell0 w0rld",
+      "error": null
+    },
+    {
+      "subject": "hello world",
+      "pattern": "o",
+      "flags": "",
+      "replacement": "0",
+      "out": "hell0 world",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "[$&]",
+      "out": "a[b]c",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "<$`|$'",
+      "out": "a<a|cc",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "$$",
+      "out": "a$c",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "[$1]",
+      "out": "a[$1]c",
+      "error": null
+    },
+    {
+      "subject": "2026-09-04",
+      "pattern": "(\\d+)-(\\d+)-(\\d+)",
+      "flags": "g",
+      "replacement": "$3/$2/$1",
+      "out": "04/09/2026",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "(b)",
+      "flags": "g",
+      "replacement": "[$2]",
+      "out": "a[$2]c",
+      "error": null
+    },
+    {
+      "subject": "ab",
+      "pattern": "(?<x>a)(?<y>b)",
+      "flags": "",
+      "replacement": "$<y>$<x>",
+      "out": "ba",
+      "error": null
+    },
+    {
+      "subject": "ab",
+      "pattern": "(?<x>a)(?<y>b)",
+      "flags": "",
+      "replacement": "[$<z>]",
+      "out": "[]",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "(?=b)",
+      "flags": "g",
+      "replacement": "-",
+      "out": "a-bc",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "a(?!c)",
+      "flags": "g",
+      "replacement": "-",
+      "out": "-bc",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "(?<=a)b",
+      "flags": "",
+      "replacement": "X",
+      "out": "aXc",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "(?<!a)b",
+      "flags": "",
+      "replacement": "X",
+      "out": "abc",
+      "error": null
+    },
+    {
+      "subject": "aa",
+      "pattern": "a*",
+      "flags": "g",
+      "replacement": "-",
+      "out": "--",
+      "error": null
+    },
+    {
+      "subject": "abab",
+      "pattern": "a.",
+      "flags": "y",
+      "replacement": "-",
+      "out": "-ab",
+      "error": null
+    },
+    {
+      "subject": "abab",
+      "pattern": "a.",
+      "flags": "gy",
+      "replacement": "-",
+      "out": "--",
+      "error": null
+    },
+    {
+      "subject": "a\nb",
+      "pattern": "a.b",
+      "flags": "s",
+      "replacement": "X",
+      "out": "X",
+      "error": null
+    },
+    {
+      "subject": "a\nb",
+      "pattern": "a.b",
+      "flags": "",
+      "replacement": "X",
+      "out": "a\nb",
+      "error": null
+    },
+    {
+      "subject": "a\nb",
+      "pattern": "^b",
+      "flags": "m",
+      "replacement": "X",
+      "out": "a\nX",
+      "error": null
+    },
+    {
+      "subject": "hello",
+      "pattern": "(l)(l)",
+      "flags": "g",
+      "replacement": "$2$1",
+      "out": "hello",
+      "error": null
+    },
+    {
+      "subject": "xax",
+      "pattern": "(a)|x",
+      "flags": "g",
+      "replacement": "[$1]",
+      "out": "[][a][]",
+      "error": null
+    },
+    {
+      "subject": "Aµ K",
+      "pattern": "µ",
+      "flags": "gi",
+      "replacement": "U",
+      "out": "AU K",
+      "error": null
+    },
+    {
+      "subject": "ΣΊΣΥΦΟΣ",
+      "pattern": "σίσυφος",
+      "flags": "i",
+      "replacement": "X",
+      "out": "X",
+      "error": null
+    },
+    {
+      "subject": "kK",
+      "pattern": "k",
+      "flags": "gi",
+      "replacement": "K",
+      "out": "KK",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "(a)(b)?(c)",
+      "flags": "g",
+      "replacement": "<$1|$2|$3>",
+      "out": "<a|b|c>",
+      "error": null
+    },
+    {
+      "subject": "--",
+      "pattern": "-",
+      "flags": "g",
+      "replacement": "[$`][$']",
+      "out": "[][-][-][]",
+      "error": null
+    },
+    {
+      "subject": "one two",
+      "pattern": "\\btwo\\b",
+      "flags": "g",
+      "replacement": "2",
+      "out": "one 2",
+      "error": null
+    },
+    {
+      "subject": "aaa",
+      "pattern": "(?=a)",
+      "flags": "g",
+      "replacement": "b",
+      "out": "bababa",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "$0",
+      "out": "a$0c",
+      "error": null
+    },
+    {
+      "subject": "abc",
+      "pattern": "b",
+      "flags": "g",
+      "replacement": "$&$&",
+      "out": "abbc",
+      "error": null
+    },
+    {
+      "subject": "path/to/file",
+      "pattern": "/",
+      "flags": "g",
+      "replacement": "$`$&$'",
+      "out": "pathpath/to/filetopath/to/filefile",
+      "error": null
+    },
+    {
+      "subject": "ab",
+      "pattern": "(a)|(b)",
+      "flags": "g",
+      "replacement": "$1$2",
+      "out": "ab",
+      "error": null
+    },
+    {
+      "subject": "zz",
+      "pattern": "(z)\\1",
+      "flags": "g",
+      "replacement": "($1)",
+      "out": "(z)",
+      "error": null
+    }
+  ],
+  "regexError": [
+    {
+      "pattern": "[",
+      "flags": "g",
+      "message": "Invalid regular expression: /[/g: Unterminated character class"
+    },
+    {
+      "pattern": "(",
+      "flags": "g",
+      "message": "Invalid regular expression: /(/g: Unterminated group"
+    },
+    {
+      "pattern": "a)",
+      "flags": "g",
+      "message": "Invalid regular expression: /a)/g: Unmatched ')'"
+    },
+    {
+      "pattern": "[a-",
+      "flags": "g",
+      "message": "Invalid regular expression: /[a-/g: Unterminated character class"
+    },
+    {
+      "pattern": "(?<a>x)(?<a>y)",
+      "flags": "g",
+      "message": "Invalid regular expression: /(?<a>x)(?<a>y)/g: Duplicate capture group name"
+    },
+    {
+      "pattern": "a{2,1}",
+      "flags": "g",
+      "message": "Invalid regular expression: /a{2,1}/g: numbers out of order in {} quantifier"
+    },
+    {
+      "pattern": "\\",
+      "flags": "g",
+      "message": "Invalid regular expression: /\\/g: \\ at end of pattern"
+    },
+    {
+      "pattern": "(?<a>x)\\k<b>",
+      "flags": "g",
+      "message": "Invalid regular expression: /(?<a>x)\\k<b>/g: Invalid named capture referenced"
+    },
+    {
+      "pattern": "a**",
+      "flags": "g",
+      "message": "Invalid regular expression: /a**/g: Nothing to repeat"
+    },
+    {
+      "pattern": "[z-a]",
+      "flags": "g",
+      "message": "Invalid regular expression: /[z-a]/g: Range out of order in character class"
+    },
+    {
+      "pattern": "(?i)x",
+      "flags": "g",
+      "message": "Invalid regular expression: /(?i)x/g: Invalid group"
+    },
+    {
+      "pattern": "(*)",
+      "flags": "g",
+      "message": "Invalid regular expression: /(*)/g: Nothing to repeat"
+    },
+    {
+      "pattern": "\\p{Foo}",
+      "flags": "gu",
+      "message": "Invalid regular expression: /\\p{Foo}/gu: Invalid property name"
+    },
+    {
+      "pattern": "(?<1a>x)",
+      "flags": "g",
+      "message": "Invalid regular expression: /(?<1a>x)/g: Invalid capture group name"
+    },
+    {
+      "pattern": "(?P<n>x)",
+      "flags": "g",
+      "message": "Invalid regular expression: /(?P<n>x)/g: Invalid group"
+    },
+    {
+      "pattern": "[\\",
+      "flags": "g",
+      "message": "Invalid regular expression: /[\\/g: \\ at end of pattern"
+    },
+    {
+      "pattern": ")",
+      "flags": "g",
+      "message": "Invalid regular expression: /)/g: Unmatched ')'"
+    },
+    {
+      "pattern": "x{2,1}{3,4}",
+      "flags": "g",
+      "message": "Invalid regular expression: /x{2,1}{3,4}/g: numbers out of order in {} quantifier"
+    }
+  ],
+  "chain": [
+    {
+      "text": "{\"id\":\"cap_001\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:05.678Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"zeta\":\"last\",\"alpha\":1,\"mid\":{\"yy\":2,\"xx\":3}},\"hash\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\"}\n{\"id\":\"rep_001\",\"type\":\"replay\",\"ts\":\"2026-01-02T03:04:06.000Z\",\"prev\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\",\"payload\":{\"ok\":true,\"count\":1},\"hash\":\"130fa97184747b96dc8f02945d0478c23dad4f0403519c054cde3ed3ea96b2f7\"}\n{\"id\":\"cap_002\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:07.123Z\",\"prev\":\"130fa97184747b96dc8f02945d0478c23dad4f0403519c054cde3ed3ea96b2f7\",\"payload\":{\"é\":1,\"e\":2,\"😀\":[1,2,{\"k\":null}]},\"hash\":\"848aa395e1a999332dd780022095ffc367dada7563e466807e2c4bc5be2f6f12\"}\n",
+      "expect": {
+        "ok": true,
+        "count": 3,
+        "head": "848aa395e1a999332dd780022095ffc367dada7563e466807e2c4bc5be2f6f12"
+      }
+    },
+    {
+      "text": "{\"id\":\"cap_001\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:05.678Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"zeta\":\"last\",\"alpha\":1,\"mid\":{\"yy\":2,\"xx\":3}},\"hash\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\"}\n{\"id\":\"rep_001\",\"type\":\"replay\",\"ts\":\"2026-01-02T03:04:06.000Z\",\"prev\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\",\"payload\":{\"ok\":false,\"count\":1},\"hash\":\"130fa97184747b96dc8f02945d0478c23dad4f0403519c054cde3ed3ea96b2f7\"}\n{\"id\":\"cap_002\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:07.123Z\",\"prev\":\"130fa97184747b96dc8f02945d0478c23dad4f0403519c054cde3ed3ea96b2f7\",\"payload\":{\"é\":1,\"e\":2,\"😀\":[1,2,{\"k\":null}]},\"hash\":\"848aa395e1a999332dd780022095ffc367dada7563e466807e2c4bc5be2f6f12\"}\n",
+      "expect": {
+        "ok": false,
+        "index": 1,
+        "id": "rep_001",
+        "reason": "record hash mismatch"
+      }
+    },
+    {
+      "text": "{\"id\":\"cap_001\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:05.678Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"zeta\":\"last\",\"alpha\":1,\"mid\":{\"yy\":2,\"xx\":3}},\"hash\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\"}\n{\"id\":\"rep_001\",\"type\":\"replay\",\"ts\":\"2026-01-02T03:04:06.000Z\",\"prev\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\",\"payload\":{\"ok\":true,\"count\":1},\"hash\":\"130fa97184747b96dc8f02945d0478c23dad4f0403519c054cde3ed3ea96b2f7\"}\n{\"id\":\"cap_002\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:07.123Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"é\":1,\"e\":2,\"😀\":[1,2,{\"k\":null}]},\"hash\":\"01d1172e3c9f9ef9b1a8ad85e89f48b8ae9253720e0b236c670c81a8c2bb61e8\"}\n",
+      "expect": {
+        "ok": false,
+        "index": 2,
+        "id": "cap_002",
+        "reason": "chain link broken"
+      }
+    },
+    {
+      "text": "{\"id\":\"cap_001\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:05.678Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"zeta\":\"last\",\"alpha\":1,\"mid\":{\"yy\":2,\"xx\":3}},\"hash\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\"}\n{\"id\":\"rep_001\",\"type\":\"replay\"}\n",
+      "expect": {
+        "ok": false,
+        "index": 1,
+        "id": "line 2",
+        "reason": "malformed record"
+      }
+    },
+    {
+      "text": "{\"id\":\"cap_001\",\"type\":\"capture\",\"ts\":\"2026-01-02T03:04:05.678Z\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"payload\":{\"zeta\":\"last\",\"alpha\":1,\"mid\":{\"yy\":2,\"xx\":3}},\"hash\":\"a580a3550f42b597436e68751a4f83581785f2673ba314eb00d8b578530dc45d\"}\nnot json\n",
+      "expect": {
+        "ok": false,
+        "index": 1,
+        "id": "line 2",
+        "reason": "malformed JSON"
+      }
+    },
+    {
+      "text": "\n\n",
+      "expect": {
+        "ok": true,
+        "count": 0,
+        "head": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    }
+  ]
+}

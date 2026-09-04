@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  node:
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: ["18", "22"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Unit + CLI tests
+        run: npm test
+
+  cpp:
+    name: C++ ${{ matrix.cc }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            cc: g++
+            mk: make
+          - os: macos-latest
+            cc: clang++
+            mk: make
+          - os: windows-latest
+            cc: g++
+            mk: mingw32-make
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install MinGW
+        if: runner.os == 'Windows'
+        run: choco install -y mingw
+      - name: Build + golden-table tests
+        run: ${{ matrix.mk }} -C cpp CXX=${{ matrix.cc }} test
+
+  diff:
+    name: Differential (C++ vs Node) on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Install MinGW
+        if: runner.os == 'Windows'
+        run: choco install -y mingw
+      - name: Build C++ binary
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            mingw32-make -C cpp
+          else
+            make -C cpp
+          fi
+      - name: Golden table is up to date with the Node reference
+        run: |
+          node tests/golden/gen_golden.mjs
+          git diff --exit-code tests/golden/golden.json
+      - name: Differential harness (C++ vs Node)
+        run: node tests/diff_cpp.mjs

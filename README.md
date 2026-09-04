@@ -12,7 +12,7 @@ Evidence-grade PoC capture, deterministic replay and hash-chain timestamping for
 - `bundle` exports a submission-ready directory (`REPORT.md`, `manifest.json`, `VERIFY.txt`, artifacts, `chain.jsonl`) whose file digests can be checked with nothing but `sha256sum` / `certutil`.
 - `anchor` commits a chain head into git; pushing that commit turns any git host into a third-party timestamp for your evidence.
 
-Zero dependencies. Node.js ≥ 18 (uses `node:test`, `node:crypto`, ESM).
+Zero dependencies. Node.js ≥ 18 (uses `node:test`, `node:crypto`, ESM). A dependency-free **C++17 port** ships in `cpp/` (see below).
 
 ## Install
 
@@ -116,10 +116,34 @@ Written plainly, because overselling evidence tools makes reports worse, not bet
 
 Also note: `chain.jsonl` contains command lines and file paths. Check repository visibility before pushing anchors.
 
+## C++17 port
+
+`cpp/` contains a dependency-free C++17 port of the whole tool — the same hash chain, the same JSONL store, the same CLI — built with nothing but a C++17 standard library (no OpenSSL, no Boost):
+
+```sh
+make -C cpp        # -> dist/cpp/poc-evidence(.exe)
+make -C cpp test   # golden-table tests against tests/golden/golden.json
+```
+
+The port is bit-exact with the Node reference wherever the two can be compared:
+
+- **Hash layer** — SHA-256 implemented from FIPS 180-4.
+- **JSON layer** — a `JSON.parse`/`JSON.stringify` clone with V8 semantics (number formatting, lone-surrogate escaping, duplicate-key last-wins, well-formed stringify), plus the tool's recursive-key-sort `stableStringify`.
+- **Regex layer** — `jsre`, a backtracking ECMAScript regex engine reproducing V8 behavior over UTF-16 code units (quantifiers, backrefs, named groups, lookbehind, `u`/`y`/`s`/`m`/`i` flags with V8 case folding), including `String.prototype.replace` `$`-template rules and V8's exact compile-error messages.
+- **Process layer** — libuv-compatible spawning (PATH resolution, `.bat`/`.cmd` routing through `cmd.exe`, Windows argv quoting) and WHATWG UTF-8 decoding of child output.
+- **Business layer** — `chain`, `capture`, `replay`, `anchor`, `bundle` and the frozen CLI surface (usage text, option parsing, exit codes, error messages).
+
+Two test layers keep it honest:
+
+- `tests/golden/golden.json` is generated **from the Node implementation** (`npm run test:golden`) and asserts the C++ side reproduces every vector: SHA-256 digests, `stableStringify` outputs, JSON parse accept/reject, `parseRegexSpec`, V8 `$`-replacement results, regex error strings and tamper-detection verdicts.
+- `tests/diff_cpp.mjs` (`npm run test:diff`) runs 27 end-to-end scenarios through both binaries in twin temp directories and compares stdout, stderr, exit codes and every produced file byte-for-byte (normalizing only timestamps, durations, record hashes and runtime markers).
+
 ## Development
 
 ```sh
-npm test        # 31 tests, zero dependencies, node:test only
+npm test            # 31 tests, zero dependencies, node:test only
+make -C cpp test    # C++ golden-table tests (161 checks)
+npm run test:diff   # differential: C++ port vs Node reference (27 scenarios)
 ```
 
 `tests/cli.test.mjs` exercises the real bin via `spawnSync` — no mocking of the call path.

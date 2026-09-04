@@ -1,3 +1,7 @@
 node_modules/
 .poc-evidence/
 evidence-*/
+dist/
+cpp/build/
+cpp/*.o
+cpp/*.exe
