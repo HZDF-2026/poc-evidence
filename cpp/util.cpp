@@ -11,6 +11,7 @@
 #include <cstring>
 #include <filesystem>
 #include <fstream>
+#include <functional>
 #include <mutex>
 #include <stdexcept>
 #include <thread>
@@ -367,9 +368,10 @@ std::vector<std::pair<std::string, std::string>> sortedEnv() {
     }
 #else
     for (char** e = environ; e && *e; e++) {
-        const char* eq = std::strchr(*e, '=');
+        const char* begin = *e;
+        const char* eq = std::strchr(begin, '=');
         if (!eq) continue;
-        vars.emplace_back(std::string(*e, eq), std::string(eq + 1));
+        vars.emplace_back(std::string(begin, eq), std::string(eq + 1));
     }
 #endif
     std::stable_sort(vars.begin(), vars.end(),

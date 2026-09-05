@@ -11,7 +11,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "node --test \"tests/*.test.mjs\"",
+    "test": "node --test",
     "test:golden": "node tests/golden/gen_golden.mjs",
     "test:diff": "node tests/diff_cpp.mjs"
   },
