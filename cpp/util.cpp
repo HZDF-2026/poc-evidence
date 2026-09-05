@@ -25,6 +25,13 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <cwchar>
+#ifdef __APPLE__
+#include <crt_externs.h>
+static char** envpEnviron() { return *_NSGetEnviron(); }
+#else
+extern "C" char** environ;
+static char** envpEnviron() { return environ; }
+#endif
 #endif
 
 namespace pocev {
@@ -161,6 +168,9 @@ std::string normalizeNative(const std::string& p) {
 }
 
 std::vector<std::string> splitComponents(const std::string& p, bool withDrive) {
+#ifndef _WIN32
+    (void)withDrive;  // only consulted for drive-letter paths
+#endif
     std::vector<std::string> parts;
     size_t start = 0;
 #ifdef _WIN32
@@ -368,7 +378,7 @@ std::vector<std::pair<std::string, std::string>> sortedEnv() {
         FreeEnvironmentStringsW(block);
     }
 #else
-    for (char** e = environ; e && *e; e++) {
+    for (char** e = envpEnviron(); e && *e; e++) {
         const char* begin = *e;
         const char* eq = std::strchr(begin, '=');
         if (!eq) continue;
