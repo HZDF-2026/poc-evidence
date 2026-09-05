@@ -24,6 +24,7 @@
 #include <poll.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <cwchar>
 #endif
 
 namespace pocev {

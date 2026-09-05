@@ -5,6 +5,8 @@
 
 #include <string>
 #include <vector>
+#include <stdexcept>
+#include <utility>
 
 namespace pocev {
 

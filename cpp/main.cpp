@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <io.h>
 #include <shellapi.h>
+#include <utility>
 #endif
 
 int main(int argc, char** argv) {
